@@ -2,12 +2,15 @@ package com.test.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.AudioAttributes;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
     boolean gameActive = true;
     // Player representation
     // 0 = cross
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     int [] [] winningPosition = { {0,1,2}, {3,4,5}, {6,7,8}, {0,3,6}, {1,4,7} , {2,5,8}, {0,4,8}, {2,4,6}};
     // On tapping grid box
     public void playerTap(View view){
+
         ImageView img = (ImageView) view;
         int tappedImg = Integer.parseInt(img.getTag().toString());
         if (!gameActive){

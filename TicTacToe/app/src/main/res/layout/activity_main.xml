@@ -4,19 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/acent"
     android:scrollbarSize="36sp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:fontFamily="sans-serif-condensed-light"
+        android:layout_marginTop="4dp"
+        android:background="@color/light"
+        android:fontFamily="serif"
+        android:paddingLeft="40dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
         android:text="@string/heading"
-        android:textSize="34sp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -158,7 +167,7 @@
         android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:fontFamily="@font/alatsi"
         android:text="Red's Turn - Tap to play"
         android:textColor="@color/design_default_color_secondary"
         android:textSize="28sp"
@@ -174,9 +183,14 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/light"
         android:fontFamily="monospace"
         android:onClick="gameReset"
         android:text="Play Again"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/light"
+        android:textColorLink="@color/light"
+        app:icon="@drawable/baseline_replay_circle_filled_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -193,5 +207,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.518"
         app:srcCompat="@drawable/fcross" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:srcCompat="@drawable/baseline_share_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
